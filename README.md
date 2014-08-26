@@ -7,7 +7,7 @@ Make sure you have npm and bower installed.
 
 ```bash
 # installs bower
-npm install -g bower
+npm install -g bower grunt-cli
 ```
 
 Then, In the root folder, run:
