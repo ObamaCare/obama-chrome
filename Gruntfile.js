@@ -43,7 +43,7 @@ module.exports = function (grunt) {
                 files: ['Gruntfile.js']
             },
             styles: {
-                files: ['<%= config.app %>/styles/{,*/}*.css'],
+                files: ['<%= config.app %>/css/{,*/}*.css'],
                 tasks: [],
                 options: {
                     livereload: true
@@ -143,7 +143,7 @@ module.exports = function (grunt) {
                 dest: '<%= config.dist %>'
             },
             html: [
-                '<%= config.app %>/popup.html',
+                '<%= config.app %>/index.html',
                 '<%= config.app %>/options.html'
             ]
         },
@@ -154,7 +154,7 @@ module.exports = function (grunt) {
                 assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
             },
             html: ['<%= config.dist %>/{,*/}*.html'],
-            css: ['<%= config.dist %>/styles/{,*/}*.css']
+            css: ['<%= config.dist %>/css/{,*/}*.css']
         },
 
         // The following *-min tasks produce minifies files in the dist folder
@@ -204,27 +204,27 @@ module.exports = function (grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-        // cssmin: {
-        //     dist: {
-        //         files: {
-        //             '<%= config.dist %>/styles/main.css': [
-        //                 '<%= config.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
-        //     }
-        // },
-        // uglify: {
-        //     dist: {
-        //         files: {
-        //             '<%= config.dist %>/scripts/scripts.js': [
-        //                 '<%= config.dist %>/scripts/scripts.js'
-        //             ]
-        //         }
-        //     }
-        // },
-        // concat: {
-        //     dist: {}
-        // },
+        cssmin: {
+            dist: {
+                files: {
+                    '<%= config.dist %>/css/main.css': [
+                        '<%= config.app %>/css/{,*/}*.css'
+                    ]
+                }
+            }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    '<%= config.dist %>/scripts/scripts.js': [
+                        '<%= config.dist %>/scripts/scripts.js'
+                    ]
+                }
+            }
+        },
+        concat: {
+            dist: {}
+        },
 
         // Copies remaining files to places other tasks can use
         copy: {
@@ -238,8 +238,8 @@ module.exports = function (grunt) {
                         '*.{ico,png,txt}',
                         'images/{,*/}*.{webp,gif}',
                         '{,*/}*.html',
-                        'styles/{,*/}*.css',
-                        'styles/fonts/{,*/}*.*',
+                        'css/{,*/}*.css',
+                        'css/fonts/{,*/}*.*',
                         '_locales/{,*/}*.json',
                     ]
                 }]
@@ -281,7 +281,7 @@ module.exports = function (grunt) {
                 options: {
                     archive: function() {
                         var manifest = grunt.file.readJSON('app/manifest.json');
-                        return 'package/Obama's Countdown-' + manifest.version + '.zip';
+                        return 'package/Obamas Countdown-' + manifest.version + '.zip';
                     }
                 },
                 files: [{
