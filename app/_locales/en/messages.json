@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Obama's Countdown",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Obama days are over",
+    "description": "The description of the application"
+  }
+}
