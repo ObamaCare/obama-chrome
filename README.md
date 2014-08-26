@@ -3,11 +3,19 @@
 Obama days are over soon. Make it personal by having a reminder in front of you, till the D-Day.
 
 ## Getting Started
-Make sure you have npm and bower installed. In the root folder, run:
+Make sure you have npm and bower installed.
+
+```bash
+# installs bower
+npm install -g bower
+```
+
+Then, In the root folder, run:
 
 ```bash
 npm install && bower install
 ```
+
 
 To build the extension, type:
 
