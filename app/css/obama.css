@@ -1,0 +1,24 @@
+.col-md-12{
+	float:none;
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:-4px;
+}
+
+
+.mainfold{
+min-height:700px;
+
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #519FF7),
+	color-stop(1, #ff6767)
+);
+background-image: -o-linear-gradient(bottom, #519FF7 0%, #ff6767 100%);
+background-image: -moz-linear-gradient(bottom, #519FF7 0%, #ff6767 100%);
+background-image: -webkit-linear-gradient(bottom, #519FF7 0%, #ff6767 100%);
+background-image: -ms-linear-gradient(bottom, #519FF7 0%, #ff6767 100%);
+background-image: linear-gradient(to bottom, #519FF7 0%, #ff6767 100%);
+}
