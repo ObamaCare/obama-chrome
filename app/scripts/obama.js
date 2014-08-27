@@ -5,12 +5,11 @@
         // set the date we're counting down to
         var target_date = new Date("Jan 20, 2017").getTime();
 
-        // variables for time units
-        var days, hours, minutes, seconds;
-
         // get tag element
         var $countdown = $("#countdown");
         var recalculate = function () {
+            // variables for time units
+            var days, hours, minutes, seconds;
 
             // find the amount of "seconds" between now and target
             var current_date = new Date().getTime();
