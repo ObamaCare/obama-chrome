@@ -10,9 +10,7 @@
 
         // get tag element
         var $countdown = $("#countdown");
-
-        // update the tag with id "countdown" every 1 second
-        setInterval(function () {
+        var recalculate = function () {
 
             // find the amount of "seconds" between now and target
             var current_date = new Date().getTime();
@@ -38,12 +36,14 @@
             var sLetter = "s";
             var sColored = sLetter.fontcolor("darkred");
 
-
-
             // format countdown string + set tag value
             $countdown.html( days + "d, " + hours + "h, "
             + minutes + "m, " + color + sColored );
+        };
+        // run once on pageload
+        recalculate();
 
-        }, 1000);
+        // update the tag with id "countdown" every 1 second
+        setInterval(recalculate, 1000);
     });
 })(jQuery);
