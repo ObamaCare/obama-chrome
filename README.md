@@ -1,6 +1,7 @@
 # obama-chrome
 
 Obama days are over soon. Make it personal by having a reminder in front of you, till the D-Day.
+See the extension here: https://chrome.google.com/webstore/detail/obamas-countdown/mckegfjbgcmomjfkbcdgbohdmnacjmna?hl=en
 
 ## Getting Started
 Make sure you have npm and bower installed.
